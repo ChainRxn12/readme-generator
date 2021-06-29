@@ -1,12 +1,12 @@
 
 
-  # **readme-generator**
+  # **Readme Generator**
 
-  [!MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+  ![Apache-2.0](https://img.shields.io/badge/License-Apache-2.0-blue.svg)
 
   ## Description 
 
-  This project is designed to create professional-looking readme files in markdown for a github repository.
+  lorem ipsum
 
   ## Table of contents
 
@@ -22,36 +22,38 @@
 
   - [Test](#Test)
 
-  - [Repository Link](#Repository)
+  - [Questions](#Questions)
 
-  - [GitHub Info](#GitHub) 
+  
 
   ## Installation
 
-          1. Make sure to have node, npm, inquirer, and axios installed in yoru working environment that you want to ru nthe program.  2.  Run 'node index' from the integrated terminal/command line.  3. Fill out the necessary question prompts.  4. WALAH! Done!
+          lorem ipsum
 
   ## Usage
 
-  Used to develop quick and easy readme files in markdown language with licensing badges and links
+  lorem ipsum
 
   ## License
 
   - This project includes the following license:
-  [!MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ![Apache-2.0](https://img.shields.io/badge/License-Apache-2.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
 
   ## Contributors
+
+  - Project welcomes pull requests.  Please open an issue.
 
   sole author
 
   ## Test
 
-  none for this project
+  none
 
-  ## Repository
+  ## Questions
 
-  - [Project Repo](https://github.com/ChainRxn12)
+  - Please forward all questions to the following: 
 
-  ## GitHub
+  - [Project Repo](https://github.com/ChainRxn12/readme-generator)
 
   ![Image of me](https://avatars.githubusercontent.com/u/78969397?v=4)
 
