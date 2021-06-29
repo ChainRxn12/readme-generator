@@ -1,107 +1,91 @@
-//require inquirer for prompt questions
-const inquirer = require('inquirer');
-//require fs to write the readme.md file
+
+const inquirer = require("inquirer");
 const fs = require('fs');
+const axios = require("axios");
+const generate = require('./generateMarkdown');
 
 
-// create inquirer prompt for readme generator
+const questions = [
+    {
+        type: "input",
+        name: "title",
+        message: "What is your project title?",
+    },
+    {
+        type: "input",
+        name: "description",
+        message: "Please provide your project's description",
+    },
+    {
+        type: "input",
+        name: "installation",
+        message: "Please provide the installation instructions",
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "Please provide the project usage",
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license',
+        choices: ['Apache-2.0', 'GPLv3', 'MIT'],
+    },
+    {
+        type: "input",
+        name: "contributing",
+        message: "Please provide the contributing parties",
+    },
+    {
+        type: "input",
+        name: "test",
+        message: "Please provide any project tests",
+    },
+    {
+        type: "input",
+        name: "username",
+        message: "What is your github user name?",
+    },
+    {
+        type: "input",
+        name: "repo",
+        message: "What is the repo link to the project?",
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "What is your email address?",
+    },
+];
 
 inquirer
-    .prompt ([
-        {
-            type: 'input',
-            name: 'title',
-            message: 'What is the title of your project?',
-        },
-        {
-            type: 'input',
-            name: 'description',
-            message: 'Describe what you project is about?',
-        },
-        {
-            type: 'input',
-            name: 'installation',
-            message: 'What are the installation instructions?',
-        },
-        {
-            type: 'input',
-            name: 'usage',
-            message: 'What are the uses of your project?',
-        },
-        {
-            type: 'list',
-            name: 'license',
-            message: 'Choose a license',
-            choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License'],
-        },
-        {
-            type: 'input',
-            name: 'contributing',
-            message: 'What are your contribution guidelines?',
-        },
-        {
-            type: 'input',
-            name: 'tests',
-            message: 'What are the testing instructions?',
-        },
-        {
-            type: 'input',
-            name: 'github',
-            message: 'What is your Github user name (case sensitive)?',
-        },
-        {
-            type: 'input',
-            name: 'email',
-            message: 'What is your email address?',
-        },
-        {
-            type: 'input',
-            name: 'name',
-            message: 'What is your name?',
-        },
-    ])
-    .then((answers) => {
-        const readmePageConent = generateReadme(answers);
+    .prompt(questions)
+    .then(function(data){
+        const queryUrl = `https://api.github.com/users/${data.username}`;
 
-        fs.writeFile('readme.md' , readmePageConent, (err) =>
-        err ? console.log(err) : console.log('You Successfull Generated a Readme.Md File!')
-        );
-    });
+        axios.get(queryUrl).then(function(res) {
+            
+            const githubInfo = {
+                githubImage: res.data.avatar_url,
+                email: res.data.email,
+                profile: res.data.html_url,
+                name: res.data.name
+            };
+            
+          fs.writeFile("README.md", generate(data, githubInfo), function(err) {
+            if (err) {
+              throw err;
+            };
+    
+            console.log("New README file created with success!");
+          });
+        });
 
-    //create generateReadme outline, plug-in necessary prompt answers
+});
 
-const generateReadme = (answers) =>
-  `# ${answers.title}
+function init() {
 
-  ## Table of Contents
+}
 
-  * [Description](#Description)
-  * [Installation](#Installation)
-  * [Usage](#Usage)
-  * [License](#License)
-  * [Contributing](#Contributing)
-  * [Tests](#Tests)
-  * [Questions](#Questions)
-
-  ## Description
-  * ${answers.description}
-
-  ## Installation
-  * ${answers.installation}
-
-  ## Usage 
-  * ${answers.usage}
-
-  ## License
-  * ${answers.license}
-
-  ## Contributing
-  * ${answers.contributing}
-
-  ## Tests
-  * ${answers.testing}
-
-  ## Questions
-  * Please feel free to reach out to me in the following links with any questions!!
-  * [Github link for ${answers.github}](https://github.com/${answers.github} "Github Link for ${answers.github}")
-  * [Email ${answers.name}](mailto:${answers.email})`;
+init();

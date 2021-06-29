@@ -1,34 +1,63 @@
-# readme generator
 
-  ## Table of Contents
 
-  * [Description](#Description)
-  * [Installation](#Installation)
-  * [Usage](#Usage)
-  * [License](#License)
-  * [Contributing](#Contributing)
-  * [Tests](#Tests)
-  * [Questions](#Questions)
+  # **readme-generator**
 
-  ## Description
-  * generating professional looking readme's through node and inquirer
+  [!MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+
+  ## Description 
+
+  This project is designed to create professional-looking readme files in markdown for a github repository.
+
+  ## Table of contents
+
+  - [Description](#Description)
+
+  - [Installation](#Installation)
+
+  - [Usage](#Usage)
+
+  - [License](#License)
+
+  - [Contributors](#Contributors)
+
+  - [Test](#Test)
+
+  - [Repository Link](#Repository)
+
+  - [GitHub Info](#GitHub) 
 
   ## Installation
-  * must have node, npm, and inquirer downloaded in order for it to work
 
-  ## Usage 
-  * makes creating a readme.md file quick and easy
+          1. Make sure to have node, npm, inquirer, and axios installed in yoru working environment that you want to ru nthe program.  2.  Run 'node index' from the integrated terminal/command line.  3. Fill out the necessary question prompts.  4. WALAH! Done!
+
+  ## Usage
+
+  Used to develop quick and easy readme files in markdown language with licensing badges and links
 
   ## License
-  * Apache License 2.0
 
-  ## Contributing
-  * none
+  - This project includes the following license:
+  [!MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  ## Tests
-  * undefined
+  ## Contributors
 
-  ## Questions
-  * Please feel free to reach out to me in the following links with any questions!!
-  * [Github link for chainrxn12](https://github.com/chainrxn12 "Github Link for chainrxn12")
-  * [Email billy dorman](mailto:b.d.dorman12@gmail.com)
+  sole author
+
+  ## Test
+
+  none for this project
+
+  ## Repository
+
+  - [Project Repo](https://github.com/ChainRxn12)
+
+  ## GitHub
+
+  ![Image of me](https://avatars.githubusercontent.com/u/78969397?v=4)
+
+  - Billy Dorman
+
+  - [GitHub Profile](https://github.com/ChainRxn12)
+
+  - [Email Billy Dorman](mailto:null)
+  
