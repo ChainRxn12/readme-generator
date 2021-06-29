@@ -25,7 +25,14 @@
   
 ## Installation
   
-1. Make sure to have node installed in your local environment.  2.  Clone this repo.  3. Run 'npm init -y' in terminal. 4.  Run 'npm install inquirer' 5.  Run 'npm install axios' 6. 'node index' in the integrated terminal.  7. Answer each prompted quesion.  8.  WALAH!  DONE!
+1. Make sure to have node installed in your local environment.  
+2. Clone this repo.  
+3. Run 'npm init -y' in terminal. 
+4. Run 'npm install inquirer' 
+5. Run 'npm install axios' 
+6. Run'node index' in the integrated terminal.  
+7. Answer each prompted quesion.  
+8. WALAH!  DONE!
   
 ## Usage
   
